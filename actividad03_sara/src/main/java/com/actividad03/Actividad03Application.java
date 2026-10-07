@@ -1,4 +1,4 @@
-package com.actividad03.actividad03;
+package com.actividad03;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
