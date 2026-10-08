@@ -30,7 +30,6 @@ public class Tabla {
             columnasInt = 1;
         }
 
-
         StringBuilder sb = new StringBuilder();
         sb.append("<table border=1>" +
                 "<thead><th colspan=" + columnasInt + ">Una tabla</th></thead>");
