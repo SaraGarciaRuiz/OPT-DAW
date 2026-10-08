@@ -8,8 +8,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class Tabla {
     @GetMapping("/tabla")
     public String tabla(@RequestParam(name = "filas", required = false) String filas, @RequestParam(name = "columnas", required = false) String columnas) {
-        int filasInt = Integer.parseInt(filas);
-        int columnasInt = Integer.parseInt(columnas);
+        int filasInt;
+        int columnasInt;
+        try {
+             filasInt = Integer.parseInt(filas);
+             columnasInt = Integer.parseInt(columnas);
+        }
+        catch(NumberFormatException e){
+            return "No has escrito un número!";
+        }
+
+        if (filasInt > 20){
+            filasInt = 20;
+        }else if(filasInt < 1){
+            filasInt = 1;
+        }
+
+        if(columnasInt > 20){
+            columnasInt = 20;
+        }else if(columnasInt < 1){
+            columnasInt = 1;
+        }
+
 
         StringBuilder sb = new StringBuilder();
         sb.append("<table border=1>" +
