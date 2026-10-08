@@ -1,4 +1,4 @@
-package com.actividad03.actividad03.controllers;
+package com.actividad03.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
